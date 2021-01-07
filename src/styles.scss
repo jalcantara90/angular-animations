@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  padding: 3em;
+}
+
+.zoom-in {
+  transition: 300ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

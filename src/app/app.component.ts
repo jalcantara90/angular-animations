@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SMThemeService } from 'sysmian';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'animations';
+
+  constructor(private readonly themeService: SMThemeService) {}
 }

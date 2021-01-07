@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/sysmian/styles/styles.scss"
             ],
             "scripts": []
           },
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "animations"
+    }
+  },
+  "defaultProject": "animations",
+  "cli": {
+    "analytics": "5daf2965-c97b-42c0-bb15-6de7135a285e"
+  }
 }

@@ -1,0 +1,11 @@
+<animation-header title="Cambios de estado - Con parámetros"></animation-header>
+
+<div class="container">
+  <div class="actions">
+    <button smButton (click)="animate()">Animate</button>
+  </div>
+
+  <div class="square"
+    [@stateChange]="animationState">
+  </div>
+</div>

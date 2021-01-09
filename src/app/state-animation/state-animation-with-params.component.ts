@@ -24,7 +24,7 @@ import { trigger, state, style, transition, animate, useAnimation, animation } f
           },
         }
       ),
-      transition('* => *', [
+      transition('* <=> *', [
         useAnimation(
           animation([
             animate('400ms ease-in-out'),
@@ -52,7 +52,7 @@ export class StateAnimationWithParamsComponent {
     params: {
       width: 300,
       height: 300,
-      backgroundColor: Math.floor(Math.random()*16777215).toString(16),
+      backgroundColor: this.getRandomHexadecimal(),
       borderRadius: 30
     }
   };
@@ -63,16 +63,20 @@ export class StateAnimationWithParamsComponent {
     this.animationState = {
       value: this.animationState.value === 'animated' ? 'other' : 'animated',
       params: {
-        width: this.getRandomArbitrary(0, 600),
-        height: this.getRandomArbitrary(0, 600),
-        backgroundColor: Math.floor(Math.random()*16777215).toString(16),
-        borderRadius: this.getRandomArbitrary(0, 50)
+        width: this.getRandomNumber(0, 600),
+        height: this.getRandomNumber(0, 600),
+        backgroundColor: this.getRandomHexadecimal(),
+        borderRadius: this.getRandomNumber(0, 50)
       }
     };
   }
 
-  getRandomArbitrary(min: number, max: number) {
+  private getRandomNumber(min: number, max: number) {
     return Math.random() * (max - min) + min;
+  }
+
+  private getRandomHexadecimal(): string {
+    return Math.floor(Math.random()*16777215).toString(16);
   }
 
 }

@@ -1,7 +1,7 @@
-<div @slideInRightList>
+<div>
   <sm-card-box class="flex">
     <div class="grid-container">
-      <sm-card [routerLink]="info.link" class="zoom-in" *ngFor="let info of animationInfo">
+      <sm-card [routerLink]="info.link" [ngClass]="routeAnimationsElements" class="zoom-in" *ngFor="let info of animationInfo">
         <sm-card-header>
           <sm-card-title>{{info.title}}</sm-card-title>
         </sm-card-header>

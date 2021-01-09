@@ -1,3 +1,4 @@
+import { ROUTE_ANIMATIONS_INTRO_RIGHT } from './../animations/route.animations';
 import { Component } from '@angular/core';
 import { slideInRightList } from '../animations/slide-right.animation';
 
@@ -11,7 +12,9 @@ interface AnimationInfo {
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [slideInRightList]
+  animations: [
+    slideInRightList
+  ]
 })
 export class HomeComponent {
   public animationInfo: AnimationInfo[] = [
@@ -27,11 +30,13 @@ export class HomeComponent {
     },
     {
       title: 'Entrada y salida',
-      description: 'Aplicar transiciones a la entrada y salida de componentes.'
+      description: 'Aplicar transiciones a la entrada y salida de componentes.',
+      link: 'enter-exit'
     },
     {
       title: 'Animaciones con varias fases',
-      description: 'Animaciones con diferentes fases (keyframes).'
+      description: 'Animaciones con diferentes fases (keyframes).',
+      link: 'keyframes'
     },
     {
       title: 'Animación entre rutas',
@@ -50,5 +55,7 @@ export class HomeComponent {
       description: 'Aplicar animaciones a componentes hijos.'
     }
   ];
+
+  routeAnimationsElements = ROUTE_ANIMATIONS_INTRO_RIGHT;
   constructor() { }
 }

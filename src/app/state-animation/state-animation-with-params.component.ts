@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, transition, animate, useAnimation, animation } from '@angular/animations';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-state-animation-with-params',
@@ -7,52 +7,30 @@ import { trigger, state, style, transition, animate, useAnimation, animation } f
   styleUrls: ['./state-animation.component.scss'],
   animations: [
     trigger('stateChange', [
-      state(
-        'animated',
-        style({
-          width: '{{width}}px',
-          height: '{{height}}px',
-          borderRadius: '{{borderRadius}}px',
-          backgroundColor: '#{{backgroundColor}}',
-        }),
-        {
-          params: {
-            width: 300,
-            height: 300,
-            borderRadius: 30,
-            backgroundColor: 'e83763'
-          },
+      state('animated, animated2', style({
+        width: '{{width}}px',
+        height: '{{height}}px',
+        borderRadius: '{{borderRadius}}px',
+        backgroundColor: '#{{backgroundColor}}',
+      }),{
+        params: {
+          width: 300,
+          height: 300,
+          borderRadius: 30,
+          backgroundColor: 'e83763'
         }
-      ),
-      transition('* <=> *', [
-        useAnimation(
-          animation([
-            animate('400ms ease-in-out'),
-            style({
-              width: '{{width}}px',
-              height: '{{height}}px',
-              borderRadius: '{{borderRadius}}px',
-              backgroundColor: '#{{backgroundColor}}',
-            })
-          ]), {
-          params: {
-            width: 300,
-            height: 300,
-            borderRadius: 30,
-            backgroundColor: 'e83763'
-          }
-        })
-      ])
+      }),
+      transition('* <=> *', animate('400ms ease-in-out'))
     ]),
   ],
 })
 export class StateAnimationWithParamsComponent {
   animationState = {
-    value: 'void',
+    value: 'animated',
     params: {
       width: 300,
       height: 300,
-      backgroundColor: this.getRandomHexadecimal(),
+      backgroundColor: 'e83763',
       borderRadius: 30
     }
   };
@@ -61,7 +39,7 @@ export class StateAnimationWithParamsComponent {
 
   animate(): void {
     this.animationState = {
-      value: this.animationState.value === 'animated' ? 'other' : 'animated',
+      value: this.animationState.value === 'animated' ? 'animated2' : 'animated',
       params: {
         width: this.getRandomNumber(0, 600),
         height: this.getRandomNumber(0, 600),

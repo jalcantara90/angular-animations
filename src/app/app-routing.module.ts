@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'state-animation', loadChildren: () => import('./state-animation/state-animation.module').then(m => m.StateAnimationModule), data: { animationState: 'StateAnimation' }},
   { path: 'enter-exit', loadChildren: () => import('./enter-exit/enter-exit.module').then(m => m.EnterExitModule), data: { animationState: 'EnterExit' } },
   { path: 'keyframes', loadChildren: () => import('./keyframes/keyframes.module').then(m => m.KeyframesModule), data: { animationState: 'Keyframes' } },
+  { path: 'sequences', loadChildren: () => import('./sequence-animations/sequence-animations.module').then(m => m.SequenceAnimationsModule), data: { animationState: 'Sequences' } },
   { path: '**', redirectTo: '' }
 ];
 

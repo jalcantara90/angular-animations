@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-enter-exit',
@@ -17,13 +17,10 @@ import { Component, OnInit } from '@angular/core';
     ])
   ]
 })
-export class EnterExitComponent implements OnInit {
+export class EnterExitComponent {
   show = true;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   showHide() {
     this.show = !this.show;

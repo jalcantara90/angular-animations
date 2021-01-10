@@ -1,4 +1,4 @@
-import { ROUTE_ANIMATIONS_INTRO_BOTTOM } from './../animations/route.animations';
+import { ROUTE_ANIMATIONS_INTRO_BOTTOM } from '../../animations/route.animations';
 import { Component, Input } from '@angular/core';
 
 @Component({

@@ -1,4 +1,4 @@
-import { AnimationHeaderModule } from './../animation-header/animation-header.module';
+import { AnimationHeaderModule } from '../shared/animation-header/animation-header.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

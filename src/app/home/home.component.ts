@@ -1,5 +1,6 @@
-import { ROUTE_ANIMATIONS_INTRO_RIGHT } from './../animations/route.animations';
+
 import { Component } from '@angular/core';
+import { ROUTE_ANIMATIONS_INTRO_RIGHT } from '../animations/route.animations';
 import { slideInRightList } from '../animations/slide-right.animation';
 
 interface AnimationInfo {
@@ -44,7 +45,8 @@ export class HomeComponent {
     },
     {
       title: 'Animaciones secuenciales',
-      description: 'Encadenar animaciones de forma secuencial.'
+      description: 'Encadenar animaciones de forma secuencial.',
+      link: 'sequences'
     },
     {
       title: 'Seleccionar multiples elementos',
@@ -56,6 +58,6 @@ export class HomeComponent {
     }
   ];
 
-  routeAnimationsElements = ROUTE_ANIMATIONS_INTRO_RIGHT;
+  introRight = ROUTE_ANIMATIONS_INTRO_RIGHT;
   constructor() { }
 }

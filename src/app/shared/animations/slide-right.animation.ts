@@ -16,7 +16,7 @@ const TRANSITION = ANIMATION_DURATION + ' ease-in-out';
 export const slideInRightList: AnimationTriggerMetadata = trigger(
   'slideInRightList',
   [
-    transition('* => *', [
+    transition(':enter, :leave', [
       query(
         ':enter',
         [

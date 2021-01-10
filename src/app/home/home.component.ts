@@ -1,7 +1,7 @@
 
 import { Component } from '@angular/core';
-import { ROUTE_ANIMATIONS_INTRO_RIGHT } from '../animations/route.animations';
-import { slideInRightList } from '../animations/slide-right.animation';
+import { ROUTE_ANIMATIONS_INTRO_RIGHT } from '../shared/animations/route.animations';
+import { slideInRightList } from '../shared/animations/slide-right.animation';
 
 interface AnimationInfo {
   title: string;
@@ -50,7 +50,8 @@ export class HomeComponent {
     },
     {
       title: 'Seleccionar multiples elementos',
-      description: 'Asignar transiciones a ciertos elementos.'
+      description: 'Asignar transiciones a varios elementos.',
+      link: 'query'
     },
     {
       title: 'Animar hijos',

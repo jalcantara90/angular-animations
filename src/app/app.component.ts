@@ -1,4 +1,4 @@
-import { routeAnimations } from './animations/route.animations';
+import { routeAnimations } from './shared/animations/route.animations';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SMThemeService } from 'sysmian';

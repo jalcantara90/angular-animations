@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'enter-exit', loadChildren: () => import('./enter-exit/enter-exit.module').then(m => m.EnterExitModule), data: { animationState: 'EnterExit' } },
   { path: 'keyframes', loadChildren: () => import('./keyframes/keyframes.module').then(m => m.KeyframesModule), data: { animationState: 'Keyframes' } },
   { path: 'sequences', loadChildren: () => import('./sequence-animations/sequence-animations.module').then(m => m.SequenceAnimationsModule), data: { animationState: 'Sequences' } },
+  { path: 'query', loadChildren: () => import('./query-and-stagger/query-and-stagger.module').then(m => m.QueryAndStaggerModule), data: { animationState: 'Query' } },
   { path: '**', redirectTo: '' }
 ];
 

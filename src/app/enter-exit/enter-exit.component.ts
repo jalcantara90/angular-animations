@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-enter-exit',
   templateUrl: './enter-exit.component.html',
-  styleUrls: ['./enter-exit.component.scss'],
   animations: [
     trigger('fadeInOut', [
       transition(':enter', [

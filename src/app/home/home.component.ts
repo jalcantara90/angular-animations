@@ -1,6 +1,5 @@
-
 import { Component } from '@angular/core';
-import { ROUTE_ANIMATIONS_INTRO_RIGHT } from '../shared/animations/route.animations';
+import { ROUTE_ANIMATIONS_INTRO_RIGHT, ROUTE_ANIMATIONS_INTRO_BOTTOM } from '../shared/animations/route.animations';
 import { slideInRightList } from '../shared/animations/slide-right.animation';
 
 interface AnimationInfo {
@@ -40,10 +39,6 @@ export class HomeComponent {
       link: 'keyframes'
     },
     {
-      title: 'Animación entre rutas',
-      description: 'Utilizar animaciones durante el cambio de rutas.'
-    },
-    {
       title: 'Animaciones secuenciales',
       description: 'Encadenar animaciones de forma secuencial.',
       link: 'sequences'
@@ -55,10 +50,13 @@ export class HomeComponent {
     },
     {
       title: 'Animar hijos',
-      description: 'Aplicar animaciones a componentes hijos.'
+      description: 'Aplicar animaciones a componentes hijos.',
+      link: 'animate-child'
     }
   ];
 
   introRight = ROUTE_ANIMATIONS_INTRO_RIGHT;
+  introBottom = ROUTE_ANIMATIONS_INTRO_BOTTOM;
+
   constructor() { }
 }

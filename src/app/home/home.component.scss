@@ -11,3 +11,8 @@
 sm-card {
   cursor: pointer;
 }
+
+h1 {
+  width: fit-content;
+  border-bottom: 2px solid var(--primary);
+}

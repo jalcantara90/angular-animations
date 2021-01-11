@@ -1,4 +1,5 @@
 <div>
+  <h1 [ngClass]="introBottom">Tipos de animaciones:</h1>
   <sm-card-box class="flex">
     <div class="grid-container">
       <sm-card [routerLink]="info.link" [ngClass]="introRight" class="zoom-in" *ngFor="let info of animationInfo">

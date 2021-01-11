@@ -1,7 +1,9 @@
 <animation-header title="Animaciones con varias fases"></animation-header>
 
 <div class="container">
-  <button smButton (click)="showHide()">{{ show ? 'Ocultar' : 'Mostrar' }}</button>
+  <div class="actions">
+    <button smButton (click)="showHide()">{{ show ? 'Ocultar' : 'Mostrar' }}</button>
+  </div>
   <sm-card-box *ngIf="show" @fadeInOut>
     <sm-card>
       <sm-card-header>

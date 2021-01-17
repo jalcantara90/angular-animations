@@ -14,8 +14,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         backgroundColor: '#{{backgroundColor}}',
       }),{
         params: {
-          width: 300,
-          height: 300,
+          width: 200,
+          height: 200,
           borderRadius: 30,
           backgroundColor: 'e83763'
         }
@@ -28,8 +28,8 @@ export class StateAnimationWithParamsComponent {
   animationState = {
     value: 'animated',
     params: {
-      width: 300,
-      height: 300,
+      width: 200,
+      height: 200,
       backgroundColor: 'e83763',
       borderRadius: 30
     }
@@ -41,8 +41,8 @@ export class StateAnimationWithParamsComponent {
     this.animationState = {
       value: this.animationState.value === 'animated' ? 'animated2' : 'animated',
       params: {
-        width: this.getRandomNumber(0, 600),
-        height: this.getRandomNumber(0, 600),
+        width: this.getRandomNumber(0, 350),
+        height: this.getRandomNumber(0, 350),
         backgroundColor: this.getRandomHexadecimal(),
         borderRadius: this.getRandomNumber(0, 50)
       }

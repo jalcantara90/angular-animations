@@ -10,16 +10,18 @@
   flex-direction: column;
   height: 60vh;
 
-  .actions {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
-  }
-
   .square {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     background-color: var(--primary);
     border-radius: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
   }
 }

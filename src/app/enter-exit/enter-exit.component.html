@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="actions">
-    <button smButton (click)="showHide()">{{ show ? 'Ocultar' : 'Mostrar' }}</button>
+    <button smButton  (click)="showHide()">{{ show ? 'Ocultar' : 'Mostrar' }}</button>
   </div>
   <sm-card-box *ngIf="show" @fadeInOut>
     <sm-card>

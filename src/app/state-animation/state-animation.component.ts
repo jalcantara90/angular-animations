@@ -11,13 +11,13 @@ import { Component } from '@angular/core';
         'base',
         style({
           transform: 'rotate(0deg)',
-          width: '300px',
-          height: '300px'
+          width: '200px',
+          height: '200px'
         })
       ),
       state('rotated', style({ transform: 'rotate(115deg)'})),
-      state('stretched', style({ height: '500px' })),
-      state('wided', style({ width: '500px' })),
+      state('stretched', style({ height: '400px' })),
+      state('wided', style({ width: '350px' })),
       transition('* => *', animate('400ms ease-in-out'))
     ])
   ]

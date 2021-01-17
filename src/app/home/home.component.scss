@@ -16,3 +16,9 @@ h1 {
   width: fit-content;
   border-bottom: 2px solid var(--primary);
 }
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
